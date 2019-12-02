@@ -1,0 +1,116 @@
+
+.image-slider {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 769px) {
+        width: 65%;
+        margin-bottom: 0;
+        align-items: center;
+    }
+}
+
+.carousel-thumbnails-container {
+    position: relative;
+    @media (min-width: 769px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left-arrow {
+            left: -30px;
+            display: block;
+            width: 12px;
+            height: 15px;
+            border-top: 2px solid #8f8787;
+            border-left: 2px solid #8f8787;
+            transform: rotate(-45deg);
+        }
+
+        .right-arrow {
+            right: -30px;
+            display: block;
+            width: 12px;
+            height: 15px;
+            border-top: 2px solid #8f8787;
+            border-left: 2px solid #8f8787;
+            transform: rotate(135deg);
+        }
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: none;
+
+        @media (min-width: 769px) {
+            display: block;
+            position: absolute;
+        }
+    }
+}
+
+.carousel-thumbnails {
+    max-width: 100%;
+    margin: 0.1875rem 0.1875rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+
+.carousel-thumbnail {
+    width: 3.3125rem;
+    height: 3.125rem;
+    margin-right: 0.1875rem;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.active {
+        box-sizing: border-box;
+        border: 4px solid #7dc242;
+    }
+}
+
+.carousel-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #fff;
+}
+
+.carousel-preview {
+    height: 18.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media (min-width: 769px) {
+        height: 400px;
+    }
+}
+
+.carousel-preview-leftArr,
+.carousel-preview-rightArr {
+    position: absolute;
+    @media (min-width: 769px) {
+        display: none;
+    }
+
+    svg {
+        pointer-events: none;
+    }
+}
+
+.carousel-preview-leftArr {
+    left: 20px;
+}
+
+.carousel-preview-rightArr {
+    right: 20px;
+}

@@ -1,0 +1,52 @@
+.parent {
+	overflow: hidden;
+	margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.slider-container {
+ /* if you want to have a scrollbar, you can add overflow here */ 
+	overflow-x: hidden;
+	justify-content: center;
+	align-items: center;
+	margin: 0rem 2rem;
+	padding: 3px;
+    scroll-behavior: smooth;
+    grid-column: 2/12;
+}
+.slider-wrapper {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.btn {
+	box-shadow: 0 0 6.1px 0.9px grey;
+	padding: 5px;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background: grey;
+	text-align: center;
+	color: white;
+	border-radius: 50%;
+}
+.prev {
+    grid-column: 1/2;
+    justify-self: center;
+}
+.next {
+    grid-column: 12/13;
+    justify-self: center;
+}
+.disable {
+	opacity: 0.5;
+ pointer-events: none;
+}
+.child {
+	padding: 5px 20px;
+	background: #59eb97;
+	text-align: center;
+	width: 100%;
+	margin-right: 10px;
+	border-radius: 21px;
+}
