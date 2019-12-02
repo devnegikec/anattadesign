@@ -11,3 +11,11 @@ and open
 http://localhost:8080 
 
 on your local browser
+
+### Desktop view
+![](anatta_desktop.gif)
+
+
+### Mobile view
+
+![](anatta_mobile.gif)
